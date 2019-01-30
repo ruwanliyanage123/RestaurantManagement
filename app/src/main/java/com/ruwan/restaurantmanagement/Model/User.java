@@ -1,5 +1,4 @@
 package com.ruwan.restaurantmanagement.Model;
-
 import com.squareup.picasso.Picasso;
 
 public class User {

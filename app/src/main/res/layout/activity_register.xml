@@ -7,13 +7,13 @@
     tools:context=".Register">
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="102dp"
-        android:text="Button"
+        android:text="sign up"
         tools:layout_editor_absoluteX="163dp"
         tools:layout_editor_absoluteY="206dp" />
 
@@ -37,7 +37,7 @@
         android:layout_marginTop="92dp"
         android:ems="10"
         android:hint="Name"
-        android:inputType="textPersonName" />
+        android:inputType="text" />
 
     <EditText
         android:id="@+id/Username"
@@ -48,6 +48,6 @@
         android:layout_marginTop="180dp"
         android:ems="10"
         android:hint="Username"
-        android:inputType="textPersonName" />
+        android:inputType="text" />
 
 </RelativeLayout>
