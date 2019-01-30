@@ -1,6 +1,7 @@
 package com.ruwan.restaurantmanagement;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -54,13 +55,14 @@ public class SignIn extends AppCompatActivity {
 
                         //check user if exists in database
 
-                        if(dataSnapshot.child(Username.getText().toString()).exists()) {
+                        if(dataSnapshot.child(Username.getText().toString()).exists()){
                             //ger user information
 
                             mDialog.dismiss();
                             User user = dataSnapshot.child(Username.getText().toString()).getValue(User.class);
                             if (user.getPassword().equals(Password.getText().toString())) {
-                                Toast.makeText(SignIn.this, "congratulations", Toast.LENGTH_SHORT).show();
+                                Intent success = new Intent(SignIn.this, Home.class);
+                                startActivity(success);
                             } else {
                                 Toast.makeText(SignIn.this, "sorry try again", Toast.LENGTH_SHORT).show();
                             }
