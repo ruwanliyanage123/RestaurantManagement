@@ -41,7 +41,7 @@ dependencies {
     //start for the impor libraries for the menu
 
     //*****************this from fourth tute
-    //implementation 'com.cepheuen.elegant-number-button:lib:1.0.2'
+    //implementation'com.cepheuen.elegant-number-button:lib:1.0.2'
     //implementation 'com.android.support:appcompat-v7:27.+'
     //implementation 'com.android.support:design:27.+'
     //****************this from fourth tute

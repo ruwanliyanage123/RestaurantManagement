@@ -1,5 +1,7 @@
 package com.ruwan.restaurantmanagement;
 
+import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -43,8 +45,15 @@ public class FoodList extends AppCompatActivity {
         //get intent here
         if(getIntent()!= null){
             categoryId = getIntent().getStringExtra("CategoryId");
+//            final ProgressDialog mDialog = new ProgressDialog(FoodList.this);
+//            mDialog.setMessage("category is........"+categoryId);
+//            mDialog.show();
+
         }
         if((!categoryId.isEmpty())&&(categoryId!=null)){
+            final ProgressDialog mDialog = new ProgressDialog(FoodList.this);
+            mDialog.setMessage("this is the second way");
+            mDialog.show();
             loadListFood(categoryId);
         }
     }
@@ -68,10 +77,14 @@ public class FoodList extends AppCompatActivity {
                 viewHolder.food_name.setText(model.getName());
                 Picasso.with(getBaseContext()).load(model.getImage()).into(viewHolder.food_image);
                 final Food local = model;
-                viewHolder.setItemClickListener(new ItemClickListener() {
+                viewHolder.setItemClickListener(new ItemClickListener(){
                     @Override
                     public void onClick(View view, int position, boolean isLongClick) {
-                        Toast.makeText(FoodList.this,""+local.getName(),Toast.LENGTH_SHORT).show();
+
+                        //start new activity
+                        Intent foodDetail = new Intent(FoodList.this, FoodDetails.class);
+                        foodDetail.putExtra("MenuId",adapter.getRef(position).getKey());
+                        startActivity(foodDetail);
                     }
                 });
             }

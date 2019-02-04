@@ -36,7 +36,8 @@ public class Home extends AppCompatActivity
     TextView txtFullName;
     RecyclerView.LayoutManager layoutManager;
     RecyclerView recyler_menu;
-    FirebaseRecyclerAdapter<Category,MenuViewHolder> adapter;
+    FirebaseRecyclerAdapter<Category,MenuViewHolder>  adapter;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -102,7 +103,6 @@ public class Home extends AppCompatActivity
                         //because category is key , so we just key of this item
                         foodList.putExtra("CategoryId", adapter.getRef(position).getKey());
                         startActivity(foodList);
-
                     }
                 });
             }
