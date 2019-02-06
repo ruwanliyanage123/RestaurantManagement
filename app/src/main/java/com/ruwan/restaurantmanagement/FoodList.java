@@ -51,9 +51,9 @@ public class FoodList extends AppCompatActivity {
 
         }
         if((!categoryId.isEmpty())&&(categoryId!=null)){
-            final ProgressDialog mDialog = new ProgressDialog(FoodList.this);
-            mDialog.setMessage("this is the second way");
-            mDialog.show();
+//            final ProgressDialog mDialog = new ProgressDialog(FoodList.this);
+//            mDialog.setMessage("this is the second way");
+//            mDialog.show();
             loadListFood(categoryId);
         }
     }
@@ -83,7 +83,7 @@ public class FoodList extends AppCompatActivity {
 
                         //start new activity
                         Intent foodDetail = new Intent(FoodList.this, FoodDetails.class);
-                        foodDetail.putExtra("MenuId",adapter.getRef(position).getKey());
+                        foodDetail.putExtra("MenuId",adapter.getRef(position).getKey());//send food id to new activity
                         startActivity(foodDetail);
                     }
                 });
