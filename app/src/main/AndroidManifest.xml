@@ -26,7 +26,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".FoodList" />
         <activity android:name=".FoodDetails" />
-        <activity android:name=".Ruwan"></activity>
+        <activity android:name=".Ruwan" />
+        <activity android:name=".Cart"></activity>
     </application>
 
 </manifest>

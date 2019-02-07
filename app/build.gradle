@@ -25,7 +25,6 @@ dependencies {
 //        exclude group:'com.android.support',module:'support-annotations'
 //    })
 
-
     //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.0.0'
 
@@ -51,7 +50,6 @@ dependencies {
     //implementation 'com.android.support:design:27.+'
     //****************this from fourth tute
 
-
     //****************start for the fifth tute
 //    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
     //implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
@@ -66,31 +64,3 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 apply plugin: 'com.google.gms.google-services'
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
